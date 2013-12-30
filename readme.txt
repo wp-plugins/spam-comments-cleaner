@@ -7,11 +7,36 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Delete all your WordPress site spam comments in a regular time interval
+Delete all the SPAM comments of your WordPress site in a regular time interval. To start the scheduled script this plugin using wp_cron hook.
 
 == Description ==
 
-This plugin will delete all the SPAM comments of your WordPress site in a regular time interval. To start the scheduled script this plugin using wp_cron hook.
+If you are a WordPress site owner then you are difinitely aware that everyday more than 20-30 SPAM comments are posting in your site's different posts. And if you do not delete your these spam comments then your database size going heavy day after day. So to have your database size lighter and remove unnecessary spam comments you have to daily come to the site and delete all the spam comments.
+
+But now no need to do this manually. We have created a plugin which will do the same job on behalf of you :)
+
+What this plugin does?
+
+This plugin basically delete all spam comments of your WordPress site in a regular time interval. All you need to do is:
+- Download and Install the Spam Comments Cleaner plugin.
+- Go to settings >> WordPress Spam Delete options page
+- Select your suitable time option to delete spam comments in a regular time interval.
+
+Features of this plugin:
+    All possible time interval available:
+        Delete Now
+        Delete after 1 minute
+        Delete in every hour.
+        Delete once in a day in a regular manner.
+        Delete twice in a day in a regular manner.
+        Delete once in a week in a regular manner.
+        Delete every day at your custom set time.
+        Stop spam comments delete.
+
+Secure and Light weight, very simple and less coding effort.
+All you need to do is click on suitable time interval button.
+To delete spam comments at your suitable time text-box available to provide custom time in hr:mm format.
+For debugging purpose provided button to delete spam in next one(1) minute.
 
 == Installation ==
 1. Upload the `wordpress-spam-cleaner` directory to the `/wp-content/plugins/` directory
