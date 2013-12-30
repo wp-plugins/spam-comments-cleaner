@@ -1,9 +1,13 @@
 === Spam Comments Cleaner ===
-Contributors: manishkrag
+Contributors: manishkrag, mindfire-solutions
+Tags: spam delete, spam clean
+Requires at least: 3.0
 Tested up to: 3.8
 Stable tag: 1.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin will delete all your spam comments in a regular time interval
+Delete all your WordPress site spam comments in a regular time interval
 
 == Description ==
 
