@@ -12,7 +12,7 @@ This plugin will delete all the SPAM comments of your WordPress site in a regula
 == Installation ==
 1. Upload the `wordpress-spam-cleaner` directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Look under "Settings" => "WordPress Spam Cleaner" to the schedule spam delete script
+1. Look under "Settings" => "WordPress Spam Cleaner" to schedule spam comments delete script
 
 ==Features==
 1. No more need to go to the comments list and delete SPAM comments manually.
