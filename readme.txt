@@ -22,16 +22,16 @@ This plugin basically delete all spam comments of your WordPress site in a regul
 - Go to settings >> WordPress Spam Delete options page
 - Select your suitable time option to delete spam comments in a regular time interval.
 
-Features of this plugin:
+= Features of this plugin: =
     All possible time interval available:
-        Delete Now
-        Delete after 1 minute
-        Delete in every hour.
-        Delete once in a day in a regular manner.
-        Delete twice in a day in a regular manner.
-        Delete once in a week in a regular manner.
-        Delete every day at your custom set time.
-        Stop spam comments delete.
+	* Delete Now
+	* Delete after 1 minute
+	* Delete in every hour.
+	* Delete once in a day in a regular manner.
+	* Delete twice in a day in a regular manner.
+	* Delete once in a week in a regular manner.
+	* Delete every day at your custom set time.
+	* Stop spam comments delete.
 
 Secure and Light weight, very simple and less coding effort.
 All you need to do is click on suitable time interval button.
