@@ -38,7 +38,7 @@ To delete spam comments at your suitable time text-box available to provide cust
 For debugging purpose provided button to delete spam in next one(1) minute.
 
 == Installation ==
-1. Upload the `wordpress-spam-cleaner` directory to the `/wp-content/plugins/` directory
+1. Upload the `spam-comments-cleaner` directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Look under "Settings" => "WordPress Spam Cleaner" to schedule spam comments delete script
 
