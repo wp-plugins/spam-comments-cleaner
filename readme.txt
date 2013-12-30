@@ -11,7 +11,7 @@ Delete all your WordPress site spam comments in a regular time interval
 
 == Description ==
 
-This plugin will delete all the SPAM comments of your WordPress site in a regular interval. To start the scheduled script this plugin using wp_cron hook.
+This plugin will delete all the SPAM comments of your WordPress site in a regular time interval. To start the scheduled script this plugin using wp_cron hook.
 
 == Installation ==
 1. Upload the `wordpress-spam-cleaner` directory to the `/wp-content/plugins/` directory
