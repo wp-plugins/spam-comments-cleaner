@@ -18,9 +18,9 @@ But we are living in advance age and here every thing should be advance. We have
 = What this plugin does? =
 
 This plugin basically delete all spam comments of your WordPress site in a regular time interval. All you need to do is:
-- Download and Install the Spam Comments Cleaner plugin.
-- Go to settings >> WordPress Spam Delete options page
-- Select your suitable time option to delete spam comments in a regular time interval.
+* Download and Install the Spam Comments Cleaner plugin.
+* Go to settings >> WordPress Spam Delete options page
+* Select your suitable time option to delete spam comments in a regular time interval.
 
 = Features of this plugin: =
     All possible time interval available:
