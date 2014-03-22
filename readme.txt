@@ -3,7 +3,7 @@ Contributors: manishkrag, mindfire-solutions
 Tags: spam delete, spam clean, mindfire solutions, wordpress comments, delete comments
 Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,8 @@ But we are living in advance age and here every thing should be advance. We have
 	* Delete once in a day in a regular manner.
 	* Delete twice in a day in a regular manner.
 	* Delete once in a week in a regular manner.
+	* Delete once in a month in a regular manner.
+	* Delete twice in a week in a regular manner.
 	* Delete every day at your custom set time.
 	* Stop spam comments delete.
 

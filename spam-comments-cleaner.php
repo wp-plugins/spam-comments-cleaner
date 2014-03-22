@@ -3,7 +3,7 @@
 Plugin Name: Spam Comments Cleaner
 Plugin URI:
 Description: This plugin will delete all your spam comments in a regular time interval.
-Version: 1.0
+Version: 1.1
 Author: Manish Kumar Agarwal
 Author URI: http://www.youngtechleads.com
 */
@@ -73,6 +73,12 @@ function wsc_options() {
 			wsc_start_cron( 'hourly' );
 		else if ( isset( $_POST['delete_spam_twice_button'] ) )
 			wsc_start_cron( 'twicedaily' );
+		else if ( isset( $_POST['delete_spam_weekly'] ) )
+			wsc_start_cron( 'weekly' );
+		else if ( isset( $_POST['delete_spam_twiceweekly'] ) )
+			wsc_start_cron( 'twiceweekly' );
+		else if ( isset( $_POST['delete_spam_monthly'] ) )
+			wsc_start_cron( 'monthly' );
 		else if ( isset( $_POST['custom_delete_spam_time'] ) )
 			wsc_start_cron( 'daily', $_POST['spam_delete_time'] );
 	}
@@ -130,6 +136,30 @@ function wsc_options() {
 					</div>
 				</form>
 				<br />
+				<form name="delete_spam_weekly" action="" method="post">
+					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+					<input type="hidden" name="delete_spam_weekly" value="update" />
+					<div>
+						<input class="button button-primary" id="delete_spam_weekly" type="submit" value="Delete spam weekly &raquo;" />
+					</div>
+				</form>
+				<br />
+				<form name="delete_spam_twiceweekly" action="" method="post">
+					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+					<input type="hidden" name="delete_spam_twiceweekly" value="update" />
+					<div>
+						<input class="button button-primary" id="delete_spam_twiceweekly" type="submit" value="Delete spam twice weekly &raquo;" />
+					</div>
+				</form>
+				<br />
+				<form name="delete_spam_monthly" action="" method="post">
+					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
+					<input type="hidden" name="delete_spam_monthly" value="update" />
+					<div>
+						<input class="button button-primary" id="delete_spam_monthly" type="submit" value="Delete spam monthly &raquo;" />
+					</div>
+				</form>
+				<br />
 				<form name="custom_delete_spam_time" action="" method="post">
 					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
 					<input type="hidden" name="custom_delete_spam_time" value="update" />
@@ -178,4 +208,23 @@ register_deactivation_hook( __FILE__, 'wsc_stop_schedule' );
 
 function wsc_stop_schedule() {
 	wp_clear_scheduled_hook( 'wordpress_spam_cleaner' );
+}
+
+add_filter( 'cron_schedules', 'cron_add_weekly' );
+ 
+function cron_add_weekly( $schedules ) {
+	// Adds once weekly to the existing schedules.
+	$schedules['weekly'] = array(
+		'interval' => 604800,
+		'display' => __( 'Once Weekly' )
+	);
+	$schedules['twiceweekly'] = array(
+		'interval' => 604800*2,
+		'display' => __( 'Twice Weekly' )
+	);
+	$schedules['monthly'] = array(
+		'interval' => 604800*4,
+		'display' => __( 'Once Monthly' )
+	);
+	return $schedules;
 }
