@@ -3,7 +3,7 @@
 Plugin Name: Spam Comments Cleaner
 Plugin URI:
 Description: This plugin will delete all your spam comments in a regular time interval.
-Version: 1.1
+Version: 1.1.1
 Author: Manish Kumar Agarwal
 Author URI: http://www.youngtechleads.com
 */
