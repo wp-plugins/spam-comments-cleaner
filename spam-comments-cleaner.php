@@ -148,7 +148,7 @@ function wsc_options() {
 					<?php wp_nonce_field( 'wordpress_spam_cleaner' ); ?>
 					<input type="hidden" name="delete_spam_twiceweekly" value="update" />
 					<div>
-						<input class="button button-primary" id="delete_spam_twiceweekly" type="submit" value="Delete spam twice weekly &raquo;" />
+						<input class="button button-primary" id="delete_spam_twiceweekly" type="submit" value="Delete spam twice Monthly &raquo;" />
 					</div>
 				</form>
 				<br />
@@ -220,7 +220,7 @@ function cron_add_weekly( $schedules ) {
 	);
 	$schedules['twiceweekly'] = array(
 		'interval' => 604800*2,
-		'display' => __( 'Twice Weekly' )
+		'display' => __( 'Twice Monthly' )
 	);
 	$schedules['monthly'] = array(
 		'interval' => 604800*4,
