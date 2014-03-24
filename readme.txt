@@ -50,5 +50,19 @@ For debugging purpose provided button to delete spam in next one(1) minute.
 1. Delete spam comment cron job can be schedule to hourly.
 1. Delete spam comment cron job can be schedule to daily.
 1. Delete spam comment cron job can be schedule to twice in a day.
+1. Delete spam comment cron job can be schedule to weekly.
+1. Delete spam comment cron job can be schedule to monthly.
+1. Delete spam comment cron job can be schedule to twice in a month.
 1. Delete spam comment cron job can be schedule to user(admin) defined time.
 1. Secure and light weighted plugin.
+
+== Changelog ==
+
+= 1.1.1 =
+* Text fixes.
+= 1.1 =
+* Added Delete once in a week in a regular manner.
+* Added Delete once in a month in a regular manner.
+* Added Delete twice in a month in a regular manner.
+= 1.0.0 =
+* First release of plug-in. No changes.
