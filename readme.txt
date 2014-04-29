@@ -56,6 +56,11 @@ For debugging purpose provided button to delete spam in next one(1) minute.
 1. Delete spam comment cron job can be schedule to user(admin) defined time.
 1. Secure and light weighted plugin.
 
+== Screenshots ==
+
+* Disabled Screen
+* Enabled Screen
+
 == Changelog ==
 
 = 1.1.1 =
