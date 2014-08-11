@@ -3,7 +3,7 @@
 Plugin Name: Spam Comments Cleaner
 Plugin URI:
 Description: This plugin will delete all your spam comments in a regular time interval.
-Version: 1.1.1
+Version: 1.2
 Author: Manish Kumar Agarwal
 Author URI: http://www.youngtechleads.com
 */
@@ -39,8 +39,15 @@ function wsc_start_cron( $schedule, $spam_delete_time = null ) {
 
 function wordpress_spam_cleaner_now() {
 	global $wpdb;
-	$wpdb->query( "DELETE FROM $wpdb->comments WHERE comment_approved='spam'" );
+	
+	$spam_comments_id_arr = $wpdb->get_col( "SELECT comment_id FROM {$wpdb->comments} WHERE comment_approved = 'spam'" ) ;
+	$spam_comments_ids = implode( ', ', array_map('intval', $spam_comments_id_arr) );
+	
+	$wpdb->query("DELETE FROM {$wpdb->comments} WHERE comment_id IN ( $spam_comments_ids )");
+	$wpdb->query("DELETE FROM {$wpdb->commentmeta} WHERE comment_id IN ( $spam_comments_ids )");
+	
 	$wpdb->query( "OPTIMIZE TABLE $wpdb->comments" );
+	$wpdb->query( "OPTIMIZE TABLE $wpdb->commentmeta" );
 }
 
 function show_spam_count() {

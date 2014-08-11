@@ -3,7 +3,7 @@ Contributors: manishkrag, mindfire-solutions
 Tags: spam delete, spam clean, mindfire solutions, wordpress comments, delete comments
 Requires at least: 3.0
 Tested up to: 3.9
-Stable tag: 1.1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,9 @@ For debugging purpose provided button to delete spam in next one(1) minute.
 * Enabled Screen
 
 == Changelog ==
+
+= 1.2 =
+* Added code to delete SPAM comments meta.
 
 = 1.1.1 =
 * Text fixes.
