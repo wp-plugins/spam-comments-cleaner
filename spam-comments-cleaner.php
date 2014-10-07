@@ -24,7 +24,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
-add_action( 'wordpress_spam_cleaner', 'wordpress_spam_cleaner_now' );
+add_action( 'wordpress_spam_cleaner', 'wordpress_spam_cleaner_now' ); 
 
 function wsc_start_cron( $schedule, $spam_delete_time = null ) {
 	if ( $spam_delete_time != null ) {
