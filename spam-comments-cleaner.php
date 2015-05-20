@@ -3,7 +3,7 @@
 Plugin Name: Spam Comments Cleaner
 Plugin URI:
 Description: This plugin will delete all your spam comments in a regular time interval.
-Version: 1.2.1
+Version: 1.2.2
 Author: Manish Kumar Agarwal
 Author URI: http://www.youngtechleads.com
 */
@@ -41,13 +41,15 @@ function wordpress_spam_cleaner_now() {
 	global $wpdb;
 	
 	$spam_comments_id_arr = $wpdb->get_col( "SELECT comment_id FROM {$wpdb->comments} WHERE comment_approved = 'spam'" ) ;
-	$spam_comments_ids = implode( ', ', array_map('intval', $spam_comments_id_arr) );
-	
-	$wpdb->query("DELETE FROM {$wpdb->comments} WHERE comment_id IN ( $spam_comments_ids )");
-	$wpdb->query("DELETE FROM {$wpdb->commentmeta} WHERE comment_id IN ( $spam_comments_ids )");
-	
-	$wpdb->query( "OPTIMIZE TABLE $wpdb->comments" );
-	$wpdb->query( "OPTIMIZE TABLE $wpdb->commentmeta" );
+	if ( !empty( $spam_comments_id_arr ) ) {
+		$spam_comments_ids = implode( ', ', array_map('intval', $spam_comments_id_arr) );
+		
+		$wpdb->query("DELETE FROM {$wpdb->comments} WHERE comment_id IN ( $spam_comments_ids )");
+		$wpdb->query("DELETE FROM {$wpdb->commentmeta} WHERE comment_id IN ( $spam_comments_ids )");
+		
+		$wpdb->query( "OPTIMIZE TABLE $wpdb->comments" );
+		$wpdb->query( "OPTIMIZE TABLE $wpdb->commentmeta" );
+	}
 }
 
 function show_spam_count() {
@@ -198,9 +200,12 @@ function wsc_options() {
 				<br />
 			<?php }	?>
 			<br />
-			Once you deactivate this plugin spam comments delete cron job will stop.
+			Once you deactivate this plugin spam comments delete cron job will stop automatically.
 			<br />
 		</div>
+		<h3>Quick Links</h3>
+		<p>Contact me skype: mfsi_manish mail me: youngtec@youngtechleadds.com</p>
+		<p><a target="_blank" href="https://wordpress.org/support/view/plugin-reviews/spam-comments-cleaner?filter=5">Rate Now</a> <strong>If this plugin really helps you, please do consider providing rating which can help others to find this plugin easily.</strong></p>
 	</div>
 	
 	<style>
